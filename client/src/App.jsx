@@ -1,3 +1,4 @@
+import ProductCard from "./components/product/ProductCard"
 import Button from "./components/ui/Button"
 import Input from "./components/ui/Input"
 import Spinner from "./components/ui/Spinner"
@@ -18,6 +19,10 @@ const App = () => {
 
       <Input type="Email" placeholder="contact@jhon.com" />
       <Spinner variant="default" />
+
+        <ProductCard />
+      <ul>
+      </ul>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 
-const Button = ({ variant, size, className, children, ...props }) => {
+const Button = ({ variant = "primary", size = "md", className, children, ...props }) => {
   const base = "font-medium rounded-full flex items-center justify-center cursor-pointer tracking-tight";
 
   const variants = {

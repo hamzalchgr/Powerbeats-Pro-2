@@ -4,12 +4,7 @@ const sizes = {
   lg: "w-14 h-14 border-4",
 };
 
-
-const Spinner = ({
-  size = "md",
-  label = "Loading...",
-  className = "",
-}) => {
+const Spinner = ({ size = "md", label = "Loading...", className = "" }) => {
   return (
     <span
       role="status"
@@ -18,6 +13,6 @@ const Spinner = ({
       style={{ animationDuration: "0.65s" }}
     />
   );
-}
+};
 
 export default Spinner;
