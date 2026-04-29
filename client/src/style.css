@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Backgrounds ── */
+  --color-white:        #FFFFFF;
+  --color-light-gray:   #F9F9F9;
+  --color-off-white:    #EFF1F2;
+  --color-dark:         #191C1D;
+  --color-black:        #000000;
+
+  /* ── Typography ── */
+  --color-text-primary:   #191C1D;
+  --color-text-body:      #191C1D;
+  --color-text-muted:     #191c1d61;
+  --color-text-subtle:    #A1A1A6;
+
+  /* ── Accent & Interactive ── */
+  --color-green:       #0F5223;
+  --color-green-light: #C4EED7;
+  
+  --color-blue:        #0842A0;
+  --color-blue-light:  #D3E3FD;
+
+  /* --color-link:           #0077ED;
+  --color-ios-blue:       #2997FF; */
+
+  /* ── Product Variants (AirPods colors) ── */
+  /* --color-starlight:    #E8E8ED;
+  --color-midnight:     #3C3C3E;
+  --color-silver:       #B4B8C0;
+  --color-space-black:  #1C1C1E;
+  --color-gold:         #FAE7C9;
+  --color-rose-gold:    #E8D5C4; */
+
+  /* ── Typography ── */
+  /* --font-sans: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "SF Mono", ui-monospace, monospace; */
+
+  /* ── Font Sizes ── */
+  /* --text-hero:    clamp(3rem, 6vw, 5rem);
+  --text-title:   clamp(1.75rem, 3vw, 2.5rem);
+  --text-sub:     1.25rem;
+  --text-body:    1rem;
+  --text-small:   0.875rem;
+  --text-caption: 0.75rem; */
+
+  /* ── Spacing ── */
+  /* --spacing-section: clamp(4rem, 8vw, 8rem);
+  --spacing-container: clamp(1.5rem, 5vw, 6rem); */
+
+  /* ── Border Radius ── */
+  /* --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   18px;
+  --radius-xl:   28px;
+  --radius-full: 9999px; */
+
+  /* ── Transitions ── */
+  /* --ease-apple: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --duration-fast:   150ms;
+  --duration-normal: 300ms;
+  --duration-slow:   500ms; */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    color: var(--color-dark);
+  }
+
+  *, *::before, *::after {
+    @apply box-border p-0 m-0;
+  }
+
+  button, input, a, li {
+    all: unset;
+  }
+
+  h1, h2, h3, h4 {
+    @apply tracking-tighter;
+  }
+}
+
+@layer components {
+  .heading-1 {
+    @apply font-bold text-[28px] leading-8.5 md:text-5xl md:leading-14;
+  }
+
+  .heading-2 {
+    @apply font-semibold text-2xl md:text-[40px] leading-7.5 md:leading-12;
+  }
+
+  .heading-3 {
+    @apply text-lg font-semibold md:text-xl leading-5.5 md:leading-6.5;
+  }
+}
