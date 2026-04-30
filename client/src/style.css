@@ -97,4 +97,14 @@
   .heading-3 {
     @apply text-lg font-semibold md:text-xl leading-5.5 md:leading-6.5;
   }
+
+
+  /* ___ IMG ___ */
+  .img-container {
+    @apply overflow-hidden;
+
+    img {
+      @apply h-full w-full object-center object-cover;
+    }
+  }
 }

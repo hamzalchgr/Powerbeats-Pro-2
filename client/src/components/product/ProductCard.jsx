@@ -4,9 +4,9 @@ import Button from "../ui/Button";
 const ProductCard = () => {
   return (
     <div className="relative flex flex-col bg-light-gray rounded-[24px] md:max-w-[360px]">
-      <div className="h-full w-full overflow-hidden">
+      <div className="img-container h-full w-full">
         <img
-          className="h-full w-full object-cover object-center mix-blend-multiply"
+          className="mix-blend-multiply"
           src="https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/powerbeats-pro-2/pdp/product-carousel/hyper-purple/pc-pbpro2-hyper-purple-p01-wired-badge.jpg.large.2x.jpg"
           alt="Powerbeats Pro 2"
         />

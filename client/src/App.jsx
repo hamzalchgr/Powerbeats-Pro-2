@@ -2,6 +2,7 @@ import ProductCard from "./components/product/ProductCard"
 import Button from "./components/ui/Button"
 import Input from "./components/ui/Input"
 import Spinner from "./components/ui/Spinner"
+import ProductPage from "./pages/productPage/ProductPage"
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
         <ProductCard />
       <ul>
       </ul>
+
+      <ProductPage />
     </div>
   )
 }

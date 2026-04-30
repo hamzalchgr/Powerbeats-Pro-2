@@ -1,14 +1,23 @@
-import { clsx } from 'clsx';
+import { clsx } from "clsx";
 
-const Button = ({ variant = "primary", size = "md", className, children, ...props }) => {
-  const base = "font-medium rounded-full flex items-center justify-center cursor-pointer tracking-tight";
+const Button = ({
+  variant = "primary",
+  size = "md",
+  className,
+  disabled = false,
+  children,
+  ...props
+}) => {
+  const base =
+    "font-medium rounded-full flex items-center justify-center tracking-tight";
 
   const variants = {
-    primary: "bg-blue text-white ",
+    primary: "bg-blue text-white cursor-pointer",
     secondary: "",
-    outline: "ring ring-[1.5px] bg-white ring-dark text-dark hover:bg-off-white",
-    ghost: "bg-white text-dark hover:bg-off-white",
-    dark: "",
+    outline:
+      "ring ring-[1.5px] bg-white ring-dark text-dark hover:bg-off-white cursor-pointer",
+    ghost: "bg-white text-dark hover:bg-off-white cursor-pointer",
+    disabled: "bg-off-white text-text-muted cursor-not-allowed",
   };
 
   const sizes = {
@@ -19,12 +28,13 @@ const Button = ({ variant = "primary", size = "md", className, children, ...prop
   return (
     <button
       type="button"
-      className={clsx(base, className, variants[variant], sizes[size])}
+      disabled={disabled}
+      className={clsx(base, variants[disabled ? "disabled" : variant], sizes[size], className)}
       {...props}
     >
       {children}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
