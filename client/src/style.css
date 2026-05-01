@@ -107,4 +107,10 @@
       @apply h-full w-full object-center object-cover;
     }
   }
+
+
+  /* __ Link & a __ */
+  Link, a {
+    @apply text-blue bg-blue-light text-sm underline cursor-pointer flex items-center gap-1 w-fit;
+  }
 }

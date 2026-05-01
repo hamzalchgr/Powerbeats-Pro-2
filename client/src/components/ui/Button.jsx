@@ -13,7 +13,7 @@ const Button = ({
 
   const variants = {
     primary: "bg-blue text-white cursor-pointer",
-    secondary: "",
+    secondary: "bg-light-blue text-blue cursor-pointer",
     outline:
       "ring ring-[1.5px] bg-white ring-dark text-dark hover:bg-off-white cursor-pointer",
     ghost: "bg-white text-dark hover:bg-off-white cursor-pointer",

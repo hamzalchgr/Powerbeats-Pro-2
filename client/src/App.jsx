@@ -2,6 +2,7 @@ import ProductCard from "./components/product/ProductCard"
 import Button from "./components/ui/Button"
 import Input from "./components/ui/Input"
 import Spinner from "./components/ui/Spinner"
+import Auth from "./pages/auth/Auth"
 import ProductPage from "./pages/productPage/ProductPage"
 
 const App = () => {
@@ -26,6 +27,8 @@ const App = () => {
       </ul>
 
       <ProductPage />
+
+      <Auth />
     </div>
   )
 }
