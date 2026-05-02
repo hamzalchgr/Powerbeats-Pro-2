@@ -9,7 +9,7 @@ const Button = ({
   ...props
 }) => {
   const base =
-    "font-medium rounded-full flex items-center justify-center tracking-tight transition";
+    "font-medium leading-5 rounded-full flex justify-center tracking-tight transition";
 
   const variants = {
     primary: "bg-blue text-white hover:bg-blue-hover",
@@ -21,9 +21,9 @@ const Button = ({
   };
 
   const sizes = {
-    sm: "min-w-8 text-sm leading-5 px-3.5 py-1.5",
-    md: "min-w-10 text-sm leading-5 px-5 py-2.5",
-    lg: "min-w-13 text-base leading-5 px-6 py-4",
+    sm: "min-w-8 text-sm px-3.5 py-1.5",
+    md: "min-w-10 text-sm px-5 py-2.5",
+    lg: "min-w-13 text-base px-6 py-4",
   };
   return (
     <button
