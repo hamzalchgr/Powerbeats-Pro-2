@@ -4,15 +4,18 @@ import ProductPage from "./pages/productPage/ProductPage";
 import Home from "./pages/home/Home";
 
 import { Routes, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
 
 const App = () => {
   return (
     <>
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/auth" element={<Auth />} />
-        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/product/:id" element={<ProductPage />} />
+        </Route>
       </Routes>
     </>
   );
