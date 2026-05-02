@@ -9,14 +9,14 @@ const Button = ({
   ...props
 }) => {
   const base =
-    "font-medium rounded-full flex items-center justify-center tracking-tight";
+    "font-medium rounded-full flex items-center justify-center tracking-tight transition";
 
   const variants = {
-    primary: "bg-blue text-white cursor-pointer",
-    secondary: "bg-light-blue text-blue cursor-pointer",
+    primary: "bg-blue text-white hover:bg-blue-hover",
+    secondary: "bg-blue-light text-blue",
     outline:
       "ring ring-[1.5px] bg-white ring-dark text-dark hover:bg-off-white cursor-pointer",
-    ghost: "bg-white text-dark hover:bg-off-white cursor-pointer",
+    ghost: "bg-white text-dark hover:bg-off-white",
     disabled: "bg-off-white text-text-muted cursor-not-allowed",
   };
 

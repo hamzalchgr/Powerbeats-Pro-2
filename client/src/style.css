@@ -18,7 +18,8 @@
   --color-green:       #0F5223;
   --color-green-light: #C4EED7;
   
-  --color-blue:        #0842A0;
+  --color-blue:        #0b57d0;
+  --color-blue-hover:        #0842A0;
   --color-blue-light:  #D3E3FD;
 
   /* --color-link:           #0077ED;
@@ -76,8 +77,16 @@
     @apply box-border p-0 m-0;
   }
 
-  button, input, a, li {
+  button, a, li {
     all: unset;
+  }
+
+  input:focus {
+    @apply outline-0;
+  }
+
+  button {
+    @apply cursor-pointer;
   }
 
   h1, h2, h3 {
@@ -111,6 +120,6 @@
 
   /* __ Link & a __ */
   Link, a {
-    @apply text-blue bg-blue-light text-sm underline cursor-pointer flex items-center gap-1 w-fit;
+    @apply text-blue hover:bg-blue-light transition text-sm underline cursor-pointer flex items-center gap-1 w-fit;
   }
 }

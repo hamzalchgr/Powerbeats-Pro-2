@@ -30,7 +30,7 @@ const Auth = () => {
 
         {email && emailExist && (
           <>
-            <Password />
+            <Password password={password} setpassword={setpassword} />
 
             <Checkbox checked={checked} setChecked={setChecked}>
               <span>

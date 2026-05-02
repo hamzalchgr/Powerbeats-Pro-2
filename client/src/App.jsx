@@ -1,36 +1,21 @@
-import ProductCard from "./components/product/ProductCard"
-import Button from "./components/ui/Button"
-import Input from "./components/ui/Input"
-import Spinner from "./components/ui/Spinner"
-import Auth from "./pages/auth/Auth"
-import ProductPage from "./pages/productPage/ProductPage"
+import Auth from "./pages/auth/Auth";
+import Cart from "./pages/cart/Cart";
+import ProductPage from "./pages/productPage/ProductPage";
+import Home from "./pages/home/Home";
+
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="">
-      <h1 className="heading-1">Hello world</h1>
-      <h2 className="heading-2">Hello world</h2>
-      <h3 className="heading-3">Hello world</h3>
-      <Button variant="primary" size="md" >Buy</Button>
-      <Button variant="primary" size="lg" >Buy</Button>
-      <Button variant="primary" size="sm" >Buy</Button>
+    <>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+      </Routes>
+    </>
+  );
+};
 
-      <Button className="px-0" variant="outline" size="md" >b</Button>
-      <Button variant="outline" size="lg" >Buy to cart</Button>
-      <Button variant="outline" size="sm" >Buy</Button>
-
-      <Input type="Email" placeholder="contact@jhon.com" />
-      <Spinner variant="default" />
-
-        <ProductCard />
-      <ul>
-      </ul>
-
-      <ProductPage />
-
-      <Auth />
-    </div>
-  )
-}
-
-export default App
+export default App;
