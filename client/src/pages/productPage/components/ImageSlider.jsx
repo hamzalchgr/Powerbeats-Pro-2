@@ -21,7 +21,7 @@ const ImageSlider = ({images}) => {
   return (
     <div
       ref={slideRef}
-      className="overflow-hidden relative rounded-4xl"
+      className="overflow-hidden relative md:rounded-4xl"
       onMouseDown={handleStart}
       onMouseMove={handleMove}
       onMouseUp={handleEnd}

@@ -1,9 +1,10 @@
-import React from 'react'
+import PdtHeader from "./components/PdtHeader";
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+  return (<div>
+      <PdtHeader />
+  </div>
+  );
+};
 
-export default Home
+export default Home;

@@ -44,13 +44,13 @@ const Header = () => {
             </li>
 
             <li>
-              <Link className="rounded-full h-10 w-10 grid place-items-center hover:bg-light-gray transition text-dark">
+              <Link to="/cart" className="rounded-full h-10 w-10 grid place-items-center hover:bg-light-gray transition text-dark">
                 <ShoppingBag size={20} />
               </Link>
             </li>
 
             <li>
-              <Link className="rounded-full h-10 w-10 grid place-items-center hover:bg-light-gray transition text-dark">
+              <Link to="/auth" className="rounded-full h-10 w-10 grid place-items-center hover:bg-light-gray transition text-dark">
                 <User size={20} />
               </Link>
             </li>

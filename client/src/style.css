@@ -96,7 +96,7 @@
 
 @layer components {
   .heading-1 {
-    @apply font-bold text-[28px] leading-8.5 md:text-5xl md:leading-14;
+    @apply font-semibold text-[28px] leading-8.5 md:text-5xl md:leading-14;
   }
 
   .heading-2 {
