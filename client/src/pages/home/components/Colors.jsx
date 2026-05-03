@@ -23,7 +23,7 @@ const Colors = ({
                 onChange={() => setColor(variant.color.name)}
               />
               <span
-                className="block h-7 w-7 rounded-full border border-gray-300 transition peer-checked:ring-2 ring-black"
+                className="block h-7 w-7 rounded-full border border-gray-300 transition peer-checked:ring-2 ring-blue"
                 style={{ backgroundColor: variant.color.code }}
               />
             </label>

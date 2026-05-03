@@ -3,7 +3,7 @@ import clsx from "clsx";
 import useSlide from "../../productPage/hooks/useSlide";
 import Button from "../../../components/ui/Button";
 import Colors from "../components/Colors";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 const product = {
   id: "",
@@ -85,7 +85,12 @@ const product = {
 
 const Hero = () => {
   const [color, setColor] = useState("black");
-  const variant = product.variants.find((v) => v.color.name === color);
+  const variant = useMemo(
+    () =>
+      product.variants.find((v) => v.color.name === color) ??
+      product.variants[0],
+      [color, product.variants]
+  );
 
   const imageList = variant?.images;
 
@@ -103,7 +108,7 @@ const Hero = () => {
   } = useSlide(imageList);
 
   return (
-    <div className="flex flex-col-reverse lg:grid gap-5 grid-cols-[2fr_3fr] lg:h-[600px] lg:bg-light-gray rounded-4xl pl-20">
+    <div className="flex flex-col-reverse lg:grid gap-5 grid-cols-[2fr_3fr] lg:h-[600px] lg:bg-light-gray rounded-4xl lg:pl-20">
       <div className="px-4 md:px-0 flex flex-col items-center lg:flex-col-reverse lg:items-start lg:justify-around gap-3">
         <div className="flex justify-center lg:items-start">
           <Colors
@@ -121,7 +126,7 @@ const Hero = () => {
 
           <div className="flex flex-col items-center lg:items-start gap-6">
             <div className="flex flex-col items-center lg:items-start gap-2">
-              <h4 className="font-medium text-xl">$129</h4>
+              <h4 className="font-medium text-xl">$${product.price}</h4>
               <p className="font-medium text-xs">
                 or make 4 payments of $32.25
               </p>
