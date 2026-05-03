@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import Button from "../../../components/ui/Button";
 
 const PdtHeader = () => {
@@ -13,20 +13,24 @@ const PdtHeader = () => {
 
             <ul className="flex gap-2">
               <li>
-                <Link
+                <NavLink
                   to="/"
-                  className="leading-5 py-3.5 px-4 rounded-full no-underline text-base font-medium bg-blue-light"
+                  className={({isActive}) => 
+                    `leading-5 py-3.5 px-4 rounded-full no-underline text-base font-medium ${isActive ? "bg-blue-light text-blue" : "bg-light-gray text-dark" }`
+                  }
                 >
                   Overview
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/techSpecs"
-                  className="leading-5 py-3.5 px-4 rounded-full no-underline text-base font-medium bg-light-gray text-dark hover:bg-off-white"
+                  className={({isActive}) => 
+                    `leading-5 py-3.5 px-4 rounded-full no-underline text-base font-medium ${isActive ? "bg-blue-light text-blue" : "bg-light-gray text-dark" }`
+                  }
                 >
                   Tech specs
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
