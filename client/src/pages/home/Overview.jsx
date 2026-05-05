@@ -99,6 +99,22 @@ const Overview = () => {
     <div className="md:max-w-[552px] lg:max-w-[1440px] mx-auto md:px-6 flex flex-col gap-15 lg:gap-[120px]">
       <Hero product={product} />
       <Features product={product} />
+
+      <section className="text-center flex flex-col items-center gap-12 lg:px-25 lg:py-10">
+
+        <div className="flex flex-col gap-2 max-w-[600px] px-4 md:px-0">
+          <h2 className="heading-2">They’re workin’ 9 to 5.</h2>
+        <p className="font-medium lg:text-xl">Up to 45 hours of continuous playback with the charging case. And each bud gives up to 10 hours of playback per charge.4</p>
+        </div>
+
+        <div className="img-container max-w-[320px] lg:max-w-[450px]">
+          <img className="" src="https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/powerbeats-pro-2/pdp/pbpro2-p11.png.large.2x.png" alt="" />
+        </div>
+        
+        <div className="flex flex-col max-w-[600px] gap-2 px-4 md:px-0">
+          <h2 className="heading-2">Less case.</h2>
+        <p className="font-medium lg:text-xl">The redesigned case is 33% smaller than the original* — and it’s our first case ever to feature wireless charging.</p></div>
+      </section>
     </div>
   );
 };
