@@ -2,13 +2,13 @@ import { CirclePlay, Rotate3D } from "lucide-react";
 
 
 const quote = {
-  text: "Powerbeats Pro 2 are made to keep up with your toughest workouts.",
-  author: "Tech Review"
+  text: "Squircle watches sit flatter on your wrist, and they are more comfortable.",
+  author: "The Verge"
 };
 
 const Features = ({product}) => {
   return (
-    <section className="grid gap-10 lg:grid-cols-[2fr_3fr] lg:gap-24 px-4 lg:px-20 md:px-0">
+    <section className="grid gap-10 lg:grid-cols-[2fr_3fr] lg:gap-24 px-4 lg:px-20  md:px-6">
 
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-5">

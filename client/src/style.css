@@ -100,7 +100,7 @@
   }
 
   .heading-2 {
-    @apply font-medium text-[28px] lg:text-[40px] leading-9 lg:leading-12;
+    @apply font-medium text-[32px] lg:text-[48px] leading-10 lg:leading-14;
   }
 
   .heading-3 {

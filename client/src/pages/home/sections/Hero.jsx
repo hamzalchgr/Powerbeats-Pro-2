@@ -7,7 +7,7 @@ import { useMemo, useState } from "react";
 
 
 const Hero = ({ product }) => {
-  const [color, setColor] = useState("black");
+  const [color, setColor] = useState("graphite");
   const variant = useMemo(
     () =>
       product.variants.find((v) => v.color.name === color) ??
@@ -31,7 +31,7 @@ const Hero = ({ product }) => {
   } = useSlide(imageList);
 
   return (
-    <div className="flex flex-col-reverse lg:grid gap-5 grid-cols-[2fr_3fr] lg:h-[600px] lg:bg-light-gray rounded-4xl lg:pl-20">
+    <div className="flex flex-col-reverse lg:grid gap-5 grid-cols-[2fr_3fr] lg:h-[600px] lg:bg-light-gray rounded-4xl lg:pl-20 md:px-6">
       <div className="px-4 md:px-0 flex flex-col items-center lg:flex-col-reverse lg:items-start lg:justify-around gap-3">
         <div className="flex justify-center lg:items-start">
           <Colors
