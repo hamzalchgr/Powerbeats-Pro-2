@@ -5,6 +5,7 @@ import { Astroid, BatteryCharging, Droplet, HeartPulse, Watch } from "lucide-rea
 import ProductShowcaseSection from "./sections/ProductShowcaseSection";
 import Highlights from "./sections/Highlights";
 import RelatedPdt from "./sections/RelatedPdt";
+import AiInteg from "./sections/AiInteg";
 
 const product = {
   id: "000001",
@@ -81,6 +82,7 @@ const Overview = () => {
       <Highlights />
 
       <RelatedPdt />
+      <AiInteg />
     </div>
   );
 };
