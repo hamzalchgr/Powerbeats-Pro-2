@@ -8,7 +8,7 @@ const quote = {
 
 const Features = ({product}) => {
   return (
-    <section className="grid gap-10 lg:grid-cols-[2fr_3fr] lg:gap-24 px-4 lg:px-20  md:px-6">
+    <section className="md:max-w-[552px] lg:max-w-[1440px] mx-auto grid gap-10 lg:grid-cols-[2fr_3fr] lg:gap-24 px-4 lg:px-20  md:px-6">
 
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-5">
@@ -30,8 +30,8 @@ const Features = ({product}) => {
 
       <ul className="flex flex-col gap-6 font-medium">
         {
-          product.features.map((feature) => (
-            <li className="flex items-center gap-3">
+          product.features.map((feature, index) => (
+            <li key={index} className="flex items-center gap-3">
               <span>{feature.icon}</span>
               <span>{feature.label}</span>
             </li>

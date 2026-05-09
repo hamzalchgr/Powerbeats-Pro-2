@@ -3,9 +3,11 @@ import Features from "./sections/Features";
 
 import { Astroid, BatteryCharging, Droplet, HeartPulse, Watch } from "lucide-react"
 import ProductShowcaseSection from "./sections/ProductShowcaseSection";
+import Highlights from "./sections/Highlights";
+import RelatedPdt from "./sections/RelatedPdt";
 
 const product = {
-  id: "",
+  id: "000001",
   name: "Galaxy Watch8",
   price: "325",
   slogan: "Beyond timekeeping.",
@@ -71,11 +73,14 @@ const product = {
 const Overview = () => {
 
   return (
-    <div className="md:max-w-[552px] lg:max-w-[1440px] mx-auto flex flex-col gap-15 lg:gap-[120px]">
+    <div className=" mx-auto flex flex-col gap-15 lg:gap-[120px]">
       <Hero product={product} />
       <Features product={product} />
 
       <ProductShowcaseSection />
+      <Highlights />
+
+      <RelatedPdt />
     </div>
   );
 };

@@ -31,7 +31,7 @@ const Hero = ({ product }) => {
   } = useSlide(imageList);
 
   return (
-    <div className="flex flex-col-reverse lg:grid gap-5 grid-cols-[2fr_3fr] lg:h-[600px] lg:bg-light-gray rounded-4xl lg:pl-20 md:px-6">
+    <div className="md:max-w-[552px] lg:max-w-[1440px] mx-auto flex flex-col-reverse lg:grid gap-5 grid-cols-[2fr_3fr] lg:h-[600px] lg:bg-light-gray rounded-4xl lg:pl-20 md:px-6">
       <div className="px-4 md:px-0 flex flex-col items-center lg:flex-col-reverse lg:items-start lg:justify-around gap-3">
         <div className="flex justify-center lg:items-start">
           <Colors
@@ -44,7 +44,7 @@ const Hero = ({ product }) => {
 
         <div className="flex flex-col items-center lg:items-start gap-4">
           <h1 className="heading-1 text-center lg:text-start">
-            Unbelievable sound. Unreal value.
+            Unbelievable performance. Unreal value.
           </h1>
 
           <div className="flex flex-col items-center lg:items-start gap-6">

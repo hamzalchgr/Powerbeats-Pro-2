@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Button from "../../../components/ui/Button";
 
 const PdtHeader = () => {
@@ -8,7 +8,7 @@ const PdtHeader = () => {
         <div className="p-2 rounded-full bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.15)] w-fit lg:w-full flex items-center justify-between sticky top-4">
           <div className="flex items-center gap-4 lg:pl-4">
             <h3 className="text-xl font-medium hidden lg:block">
-              Powerbeats Pro 2
+              Galaxy Watch8
             </h3>
 
             <ul className="flex gap-2">
@@ -37,9 +37,9 @@ const PdtHeader = () => {
 
           <div className="hidden lg:flex items-center gap-2 ">
             <div className="flex flex-col items-end gap-1">
-              <h4 className="font-medium text-sm">$129</h4>
+              <h4 className="font-medium text-sm">${325.00}</h4>
               <p className="font-medium text-xs">
-                or make 4 payments of $32.25
+                or make 4 payments of ${(325 / 4).toFixed(2)}
               </p>
             </div>
 
@@ -49,11 +49,11 @@ const PdtHeader = () => {
       </div>
 
       <div className="w-full bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.15)] rounded-t-2xl p-4 lg:hidden flex flex-col gap-2 fixed bottom-0">
-        <h3 className="font-medium text-lg">Powerbeats Pro 2</h3>
+        <h3 className="font-medium text-lg">Galaxy Watch8</h3>
         <div className="flex items-end justify-between">
           <div className="flex flex-col gap-1">
-            <h4 className="font-medium text-sm">$129</h4>
-            <p className="font-medium text-xs">or make 4 payments of $32.25</p>
+            <h4 className="font-medium text-sm">$325</h4>
+            <p className="font-medium text-xs">or make 4 payments of ${(325 / 4).toFixed(2)}</p>
           </div>
 
           <Button size="md">Buy</Button>

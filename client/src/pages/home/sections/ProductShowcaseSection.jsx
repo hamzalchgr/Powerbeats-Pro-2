@@ -1,5 +1,5 @@
 import { PauseCircle, PlayCircle } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const DETAILS = {
   heading: "Ultra-comfortable, sleep in training",
@@ -14,6 +14,8 @@ const DETAILS = {
 const ProductShowcaseSection = () => {
   const [ended, setEnded] = useState(false);
 
+  const videoRef = useRef(null);
+
   return (
     <section className="text-center flex flex-col items-center gap-12 lg:py-10">
       <div className="flex flex-col items-center gap-5 max-w-[600px] px-4 md:px-0">
@@ -21,7 +23,7 @@ const ProductShowcaseSection = () => {
         <p className="font-medium text-text-muted">{DETAILS.desc}</p>
       </div>
 
-      <div className="relative h-screen w-[100vw] overflow-hidden">
+      <div className="relative h-screen max-w-screen overflow-hidden">
         {ended ? (
           <img
             className="h-full w-full object-center object-cover"
@@ -30,6 +32,7 @@ const ProductShowcaseSection = () => {
           />
         ) : (
           <video
+          ref={videoRef}
             className="h-full w-full object-center object-cover"
             src={DETAILS.media.video}
             autoPlay
@@ -40,9 +43,21 @@ const ProductShowcaseSection = () => {
 
         <div className="absolute bottom-5 w-full flex justify-center">
           <button
-          className="text-off-white"
+          className="text-text-muted h-12 w-12 grid place-items-center bg-white rounded-full shadow-lg"
           aria-label="play/pause video"
-          onClick={() => setEnded(!ended)}
+          onClick={() => {
+            const video = videoRef.current;
+
+            if (!video) return;
+
+            if (video.paused) {
+              video.play();
+              setEnded(false);
+            } else {
+              video.pause();
+              setEnded(true)
+            }
+          }}
         >
           {ended ? <PlayCircle size={32} /> : <PauseCircle size={32} />}
         </button>
